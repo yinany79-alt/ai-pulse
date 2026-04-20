@@ -1,0 +1,59 @@
+#!/usr/bin/env node
+import fs from 'fs';
+import path from 'path';
+
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const dataDir = path.join(__dirname, '..', 'data');
+
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir, { recursive: true });
+}
+
+const mockSalonsData = [
+  {
+    id: 's1',
+    title: '奇点智能技术大会',
+    organizer: '奇点汽车',
+    date: '2026-04-25',
+    time: '09:00-18:00',
+    location: '上海 · 国际会议中心',
+    description: '李建忠分享 Agent 驱动的软件新范式；陈恺解析万亿参数 Intern-S1-Pro 技术细节',
+    tags: ['Agent', '大模型', '上海']
+  },
+  {
+    id: 's2',
+    title: '中国人形机器人生态大会',
+    organizer: '宇树科技',
+    date: '2026-04-26',
+    time: '10:00-17:00',
+    location: '上海 · 张江科学会堂',
+    description: '宇树 G1 EDU 进阶版现场演示多模态交互；讨论人形机器人对算力集群的实时调度需求',
+    tags: ['具身智能', '机器人', '上海']
+  },
+  {
+    id: 's3',
+    title: 'AI Infra 闭门研讨会',
+    organizer: 'AI 基础设施联盟',
+    date: '2026-04-27',
+    time: '14:00-18:00',
+    location: '北京 · 望京 SOHO',
+    description: '讨论 Metric Center（指标中心）在超大规模训练中的实时观测性挑战',
+    tags: ['MLOps', '算力中心', '北京']
+  },
+  {
+    id: 's4',
+    title: '大模型应用开发沙龙',
+    organizer: '字节跳动火山引擎',
+    date: '2026-04-26',
+    time: '13:30-17:00',
+    location: '北京 · 中关村创新中心',
+    description: '豆包大模型应用开发实战，Agent 开发最佳实践分享',
+    tags: ['应用开发', 'Agent', '北京']
+  }
+];
+
+const outputPath = path.join(dataDir, 'salons.json');
+fs.writeFileSync(outputPath, JSON.stringify(mockSalonsData, null, 2), 'utf-8');
+
+console.log(`✅ Salons data saved to ${outputPath}`);
+console.log(`   ${mockSalonsData.length} salons fetched`);

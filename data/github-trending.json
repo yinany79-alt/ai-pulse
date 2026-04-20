@@ -1,0 +1,86 @@
+[
+  {
+    "id": "g1",
+    "name": "openai-agents-python",
+    "owner": "openai",
+    "description": "Build multi-agent workflows with this lightweight, provider-agnostic framework",
+    "language": "Python",
+    "stars": "12.4k",
+    "starsToday": "752",
+    "url": "https://github.com/openai/openai-agents-python",
+    "tags": [
+      "Agents",
+      "LLM"
+    ]
+  },
+  {
+    "id": "g2",
+    "name": "thunderbolt",
+    "owner": "thunderbird",
+    "description": "High-performance inference engine for multimodal models",
+    "language": "TypeScript",
+    "stars": "8.2k",
+    "starsToday": "695",
+    "url": "https://github.com/thunderbird/thunderbolt",
+    "tags": [
+      "Inference",
+      "Multimodal"
+    ]
+  },
+  {
+    "id": "g3",
+    "name": "omi",
+    "owner": "BasedHardware",
+    "description": "Open-source AI wearable device firmware and app",
+    "language": "Dart",
+    "stars": "23.1k",
+    "starsToday": "685",
+    "url": "https://github.com/BasedHardware/omi",
+    "tags": [
+      "Wearable",
+      "AI"
+    ]
+  },
+  {
+    "id": "g4",
+    "name": "paperless-ngx",
+    "owner": "paperless-ngx",
+    "description": "Document management system with AI-powered OCR",
+    "language": "Python",
+    "stars": "41.2k",
+    "starsToday": "393",
+    "url": "https://github.com/paperless-ngx/paperless-ngx",
+    "tags": [
+      "OCR",
+      "Document"
+    ]
+  },
+  {
+    "id": "g5",
+    "name": "evolver",
+    "owner": "EvoMap",
+    "description": "Interactive visualization for LLM evolution trajectories",
+    "language": "JavaScript",
+    "stars": "5.7k",
+    "starsToday": "527",
+    "url": "https://github.com/EvoMap/evolver",
+    "tags": [
+      "Visualization",
+      "LLM"
+    ]
+  },
+  {
+    "id": "g6",
+    "name": "RuView",
+    "owner": "ruvnet",
+    "description": "AI-powered code review and refactoring assistant",
+    "language": "Rust",
+    "stars": "3.2k",
+    "starsToday": "149",
+    "url": "https://github.com/ruvnet/RuView",
+    "tags": [
+      "Code Review",
+      "AI"
+    ]
+  }
+]
