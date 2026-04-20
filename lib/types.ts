@@ -6,9 +6,9 @@ export interface NewsItem {
   description: string;
   date: string;
   url?: string;
+  image?: string;
   size: 'small' | 'medium' | 'large';
   tags: string[];
-  image?: string;
 }
 
 export interface GitHubRepo {
@@ -20,6 +20,7 @@ export interface GitHubRepo {
   stars: string;
   starsToday: string;
   url: string;
+  image?: string;
   tags: string[];
 }
 
@@ -31,6 +32,7 @@ export interface SkillItem {
   platform: 'GPT' | 'Claude' | 'Gemini' | 'OpenAI Agents';
   stars: string;
   url: string;
+  image?: string;
   tags: string[];
 }
 
@@ -43,5 +45,6 @@ export interface SalonItem {
   location: string;
   description: string;
   url?: string;
+  image?: string;
   tags: string[];
 }

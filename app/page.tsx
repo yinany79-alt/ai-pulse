@@ -2,7 +2,10 @@ import NewsCard from '@/components/NewsCard';
 import GitHubCard from '@/components/GitHubCard';
 import SkillCard from '@/components/SkillCard';
 import SalonCard from '@/components/SalonCard';
-import { mockNews, mockGitHub, mockSkills, mockSalons } from '@/lib/mock-data';
+import newsData from '@/data/news.json';
+import githubData from '@/data/github-trending.json';
+import skillsData from '@/data/skills.json';
+import salonsData from '@/data/salons.json';
 
 export default function Home() {
   return (
@@ -32,7 +35,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[300px] gap-5">
-            {mockNews.map((item) => (
+            {newsData.map((item: any) => (
               <NewsCard key={item.id} item={item} />
             ))}
           </div>
@@ -47,7 +50,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {mockSkills.map((item) => (
+            {skillsData.map((item: any) => (
               <SkillCard key={item.id} item={item} />
             ))}
           </div>
@@ -62,7 +65,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {mockGitHub.map((item) => (
+            {githubData.map((item: any) => (
               <GitHubCard key={item.id} item={item} />
             ))}
           </div>
@@ -77,7 +80,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {mockSalons.map((item) => (
+            {salonsData.map((item: any) => (
               <SalonCard key={item.id} item={item} />
             ))}
           </div>

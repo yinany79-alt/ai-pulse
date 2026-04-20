@@ -8,6 +8,7 @@
     "stars": "12.4k",
     "starsToday": "752",
     "url": "https://github.com/openai/openai-agents-python",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop",
     "tags": [
       "Agents",
       "LLM"
@@ -22,6 +23,7 @@
     "stars": "8.2k",
     "starsToday": "695",
     "url": "https://github.com/thunderbird/thunderbolt",
+    "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=400&fit=crop",
     "tags": [
       "Inference",
       "Multimodal"
@@ -36,6 +38,7 @@
     "stars": "23.1k",
     "starsToday": "685",
     "url": "https://github.com/BasedHardware/omi",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=400&fit=crop",
     "tags": [
       "Wearable",
       "AI"
@@ -50,6 +53,7 @@
     "stars": "41.2k",
     "starsToday": "393",
     "url": "https://github.com/paperless-ngx/paperless-ngx",
+    "image": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&h=400&fit=crop",
     "tags": [
       "OCR",
       "Document"
@@ -64,6 +68,7 @@
     "stars": "5.7k",
     "starsToday": "527",
     "url": "https://github.com/EvoMap/evolver",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
     "tags": [
       "Visualization",
       "LLM"
@@ -78,6 +83,7 @@
     "stars": "3.2k",
     "starsToday": "149",
     "url": "https://github.com/ruvnet/RuView",
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=400&fit=crop",
     "tags": [
       "Code Review",
       "AI"

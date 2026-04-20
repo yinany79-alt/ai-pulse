@@ -6,35 +6,49 @@ interface SalonCardProps {
   item: SalonItem;
 }
 
-const salonGradients: Record<string, string> = {
-  beijing: 'linear-gradient(135deg, #fed7aa 0%, #fdba74 50%, #fb923c 100%)',
-  shanghai: 'linear-gradient(135deg, #bfdbfe 0%, #93c5fd 50%, #60a5fa 100%)',
+const salonAccents: Record<string, string> = {
+  beijing: '#f97316',
+  shanghai: '#4285f4',
 };
 
 export default function SalonCard({ item }: SalonCardProps) {
   const isBeijing = item.location.includes('北京');
-  const accent = isBeijing ? '#f97316' : '#4285f4';
-  const gradient = isBeijing ? salonGradients.beijing : salonGradients.shanghai;
+  const accent = isBeijing ? salonAccents.beijing : salonAccents.shanghai;
   const cityLabel = isBeijing ? '北京' : '上海';
 
+  const handleClick = () => {
+    if (item.url) {
+      window.open(item.url, '_blank');
+    }
+  };
+
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all cursor-pointer group flex flex-col overflow-hidden">
-      {/* Image Placeholder */}
-      <div
-        className="h-24 flex items-center justify-center relative overflow-hidden"
-        style={{ background: gradient }}
-      >
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute w-28 h-28 rounded-full bg-white/40 -left-8 -bottom-8" />
-          <div className="absolute w-16 h-16 rounded-full bg-white/30 -right-4 -top-4" />
-        </div>
-        <div className="flex flex-col items-center text-white/60">
-          <svg className="w-8 h-8 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-          <span className="text-sm font-bold">{cityLabel}</span>
-        </div>
+    <div
+      onClick={handleClick}
+      className="bg-white rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all cursor-pointer group flex flex-col overflow-hidden"
+    >
+      {/* Image */}
+      <div className="h-24 overflow-hidden">
+        {item.image ? (
+          <img
+            src={item.image}
+            alt={item.title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div
+            className="w-full h-full flex items-center justify-center"
+            style={{ background: `linear-gradient(135deg, ${accent}20 0%, ${accent}40 100%)` }}
+          >
+            <div className="flex flex-col items-center" style={{ color: `${accent}60` }}>
+              <svg className="w-8 h-8 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span className="text-sm font-bold">{cityLabel}</span>
+            </div>
+          </div>
+        )}
       </div>
 
       <div className="p-5 flex flex-col flex-1">

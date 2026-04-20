@@ -16,9 +16,38 @@ const platformAccents: Record<string, string> = {
 export default function SkillCard({ item }: SkillCardProps) {
   const accent = platformAccents[item.platform] || '#6b7280';
 
+  const handleClick = () => {
+    if (item.url) {
+      window.open(item.url, '_blank');
+    }
+  };
+
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all cursor-pointer group flex flex-col overflow-hidden">
-      <div className="p-6 flex flex-col h-full">
+    <div
+      onClick={handleClick}
+      className="bg-white rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all cursor-pointer group flex flex-col overflow-hidden"
+    >
+      {/* Image */}
+      <div className="h-24 overflow-hidden">
+        {item.image ? (
+          <img
+            src={item.image}
+            alt={item.name}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div
+            className="w-full h-full flex items-center justify-center"
+            style={{ background: `linear-gradient(135deg, ${accent}20 0%, ${accent}40 100%)` }}
+          >
+            <div className="text-4xl font-bold tracking-tight" style={{ color: `${accent}60` }}>
+              {item.platform[0]}
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div className="p-5 flex flex-col flex-1">
         <div className="flex items-start justify-between mb-3">
           <span
             className="px-2 py-0.5 text-xs rounded-full font-semibold"
@@ -42,7 +71,7 @@ export default function SkillCard({ item }: SkillCardProps) {
           {item.name}
         </h3>
 
-        <p className="text-gray-600 text-sm leading-relaxed mb-5 flex-1">
+        <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1 line-clamp-2">
           {item.description}
         </p>
 

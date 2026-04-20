@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "fetch": "node scripts/fetch-all.mjs",
+    "update": "node scripts/fetch-all.mjs && git add data/ && git commit -m \"chore: update data $(date +'%Y-%m-%d')\" && git push",
     "fetch:news": "node scripts/fetch-news.mjs",
     "fetch:github": "node scripts/fetch-github-trending.mjs",
     "fetch:skills": "node scripts/fetch-skills.mjs",

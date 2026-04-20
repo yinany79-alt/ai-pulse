@@ -18,6 +18,7 @@ const mockSkillsData = [
     platform: 'OpenAI Agents',
     stars: '12.4k',
     url: 'https://github.com/openai/openai-agents-python',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop',
     tags: ['Agents', '框架', '官方']
   },
   {
@@ -28,6 +29,7 @@ const mockSkillsData = [
     platform: 'Claude',
     stars: '8.2k',
     url: 'https://claude.ai',
+    image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=400&fit=crop',
     tags: ['代码执行', '数据分析']
   },
   {
@@ -38,6 +40,7 @@ const mockSkillsData = [
     platform: 'GPT',
     stars: '5.7k',
     url: 'https://github.com/example/gpt-vision',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
     tags: ['视觉', '多模态']
   },
   {
@@ -48,6 +51,7 @@ const mockSkillsData = [
     platform: 'Gemini',
     stars: '4.3k',
     url: 'https://ai.google.dev',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=400&fit=crop',
     tags: ['函数调用', '工具']
   },
   {
@@ -58,6 +62,7 @@ const mockSkillsData = [
     platform: 'OpenAI Agents',
     stars: '9.1k',
     url: 'https://github.com/example/auto-coder',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop',
     tags: ['编码', '自动']
   },
   {
@@ -68,6 +73,7 @@ const mockSkillsData = [
     platform: 'Claude',
     stars: '6.8k',
     url: 'https://github.com/example/web-research',
+    image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&h=400&fit=crop',
     tags: ['搜索', '研究']
   }
 ];

@@ -9,7 +9,6 @@ if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir, { recursive: true });
 }
 
-// 模拟的大厂新闻数据（真实环境可以用 RSS/爬虫）
 const mockNewsData = [
   {
     id: '1',
@@ -19,6 +18,7 @@ const mockNewsData = [
     description: '轻量级但功能强大的多 Agent 工作流框架，支持 OpenAI 及 100+ 其他大模型',
     date: '2026-04-20',
     url: 'https://github.com/openai/openai-agents-python',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop',
     size: 'large',
     tags: ['Agents', '框架', '开源']
   },
@@ -29,6 +29,8 @@ const mockNewsData = [
     type: 'release',
     description: 'TurboQuant 量化方案在保持 FP16 精度的情况下，将推理吞吐提升 40%，特别优化长文本场景',
     date: '2026-04-19',
+    url: 'https://ai.google.dev',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=400&fit=crop',
     size: 'medium',
     tags: ['推理优化', '量化']
   },
@@ -39,6 +41,8 @@ const mockNewsData = [
     type: 'skill',
     description: '结构化数据提取能力大幅增强，支持复杂表格和多文档对比分析',
     date: '2026-04-18',
+    url: 'https://claude.ai',
+    image: 'https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=800&h=400&fit=crop',
     size: 'small',
     tags: ['Skill', '数据处理']
   },
@@ -49,6 +53,8 @@ const mockNewsData = [
     type: 'update',
     description: '社区开源项目汇总 Llama 3 高效微调攻略，包含 LoRA、QLoRA 等多种方案对比',
     date: '2026-04-18',
+    url: 'https://ai.meta.com',
+    image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop',
     size: 'medium',
     tags: ['微调', '最佳实践']
   },
@@ -59,6 +65,8 @@ const mockNewsData = [
     type: 'release',
     description: '字节跳动开源豆包大模型推理引擎，支持多卡并行和动态批处理',
     date: '2026-04-17',
+    url: 'https://www.volcengine.com',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
     size: 'medium',
     tags: ['推理引擎', '开源']
   }

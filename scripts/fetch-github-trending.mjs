@@ -5,12 +5,10 @@ import path from 'path';
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 const dataDir = path.join(__dirname, '..', 'data');
 
-// 确保 data 目录存在
 if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir, { recursive: true });
 }
 
-// 模拟的 GitHub Trending 数据（真实环境可以用 API 或爬虫）
 const mockGitHubData = [
   {
     id: 'g1',
@@ -21,6 +19,7 @@ const mockGitHubData = [
     stars: '12.4k',
     starsToday: '752',
     url: 'https://github.com/openai/openai-agents-python',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop',
     tags: ['Agents', 'LLM']
   },
   {
@@ -32,6 +31,7 @@ const mockGitHubData = [
     stars: '8.2k',
     starsToday: '695',
     url: 'https://github.com/thunderbird/thunderbolt',
+    image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=400&fit=crop',
     tags: ['Inference', 'Multimodal']
   },
   {
@@ -43,6 +43,7 @@ const mockGitHubData = [
     stars: '23.1k',
     starsToday: '685',
     url: 'https://github.com/BasedHardware/omi',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=400&fit=crop',
     tags: ['Wearable', 'AI']
   },
   {
@@ -54,6 +55,7 @@ const mockGitHubData = [
     stars: '41.2k',
     starsToday: '393',
     url: 'https://github.com/paperless-ngx/paperless-ngx',
+    image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&h=400&fit=crop',
     tags: ['OCR', 'Document']
   },
   {
@@ -65,6 +67,7 @@ const mockGitHubData = [
     stars: '5.7k',
     starsToday: '527',
     url: 'https://github.com/EvoMap/evolver',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
     tags: ['Visualization', 'LLM']
   },
   {
@@ -76,11 +79,11 @@ const mockGitHubData = [
     stars: '3.2k',
     starsToday: '149',
     url: 'https://github.com/ruvnet/RuView',
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=400&fit=crop',
     tags: ['Code Review', 'AI']
   }
 ];
 
-// 写入文件
 const outputPath = path.join(dataDir, 'github-trending.json');
 fs.writeFileSync(outputPath, JSON.stringify(mockGitHubData, null, 2), 'utf-8');
 

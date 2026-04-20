@@ -18,6 +18,8 @@ const mockSalonsData = [
     time: '09:00-18:00',
     location: '上海 · 国际会议中心',
     description: '李建忠分享 Agent 驱动的软件新范式；陈恺解析万亿参数 Intern-S1-Pro 技术细节',
+    url: 'https://example.com/salon1',
+    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=400&fit=crop',
     tags: ['Agent', '大模型', '上海']
   },
   {
@@ -28,6 +30,8 @@ const mockSalonsData = [
     time: '10:00-17:00',
     location: '上海 · 张江科学会堂',
     description: '宇树 G1 EDU 进阶版现场演示多模态交互；讨论人形机器人对算力集群的实时调度需求',
+    url: 'https://example.com/salon2',
+    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop',
     tags: ['具身智能', '机器人', '上海']
   },
   {
@@ -38,6 +42,8 @@ const mockSalonsData = [
     time: '14:00-18:00',
     location: '北京 · 望京 SOHO',
     description: '讨论 Metric Center（指标中心）在超大规模训练中的实时观测性挑战',
+    url: 'https://example.com/salon3',
+    image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=400&fit=crop',
     tags: ['MLOps', '算力中心', '北京']
   },
   {
@@ -48,6 +54,8 @@ const mockSalonsData = [
     time: '13:30-17:00',
     location: '北京 · 中关村创新中心',
     description: '豆包大模型应用开发实战，Agent 开发最佳实践分享',
+    url: 'https://example.com/salon4',
+    image: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=400&fit=crop',
     tags: ['应用开发', 'Agent', '北京']
   }
 ];
